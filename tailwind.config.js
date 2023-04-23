@@ -1,18 +1,42 @@
+const {fontFamily} = require("tailwindcss/defaultTheme");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        primary: "#E0FF70",
+        secondary: "#3069FE",
+        dark: {
+          100: "#FDFDFD",
+          200: "#8C8C8C",
+          300: "#5F5E5E",
+          400: "#565656",
+          500: "#313030",
+          600: "#222222",
+          700: "#171D1C",
+          800: "#101828",
+        },
+      },
+      fontSize: {
+        sm: ["10px", {lineHeight: "18px", letterSpacing: "0em"}],
+        md: ["12px", {lineHeight: "16px", letterSpacing: "0em"}],
+        base: ["14px", {lineHeight: "20px", letterSpacing: "0.02em"}],
+        lg: ["16px", {lineHeight: "20px", letterSpacing: "0em"}],
+        xl: ["18px", {lineHeight: "25px", letterSpacing: "0em"}],
+        "2xl": ["20px", {lineHeight: "24px", letterSpacing: "0em"}],
+        "3xl": ["24px", {lineHeight: "29px", letterSpacing: "0em"}],
+        "4xl": ["40px", {lineHeight: "48px", letterSpacing: "0em"}],
+        "5xl": ["64px", {lineHeight: "77px", letterSpacing: "0em"}],
+        "6xl": ["80px", {lineHeight: "80px", letterSpacing: "0em"}],
+      },
+      fontFamily: {
+        geomanist: ["'Geomanist'", ...fontFamily.sans],
+        poppins: ["'Poppins'", ...fontFamily.sans],
+        inter: ["'Inter'", ...fontFamily.sans],
       },
     },
   },
   plugins: [],
-}
+};

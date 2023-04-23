@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,400;1,500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap')
+@import '../font/geomanist/main.sass'
+@import "tailwindcss/base"
+@import "tailwindcss/components"
+@import "tailwindcss/utilities"
+
+
+*
+  @apply box-border
+
+html
+  @apply scroll-smooth
+
+body
+  @apply p-0 m-0 font-sans
+
+@layer components
+  a
+    @apply no-underline hover:underline underline-offset-2
+
+  input,
+  select,
+  textarea,
+  button
+    @apply focus:outline-none bg-transparent
+
+  .text-linear
+    background-clip: text
+    -webkit-background-clip: text
+    -webkit-text-fill-color: transparent
+
+
+  [role="button"],
+  button
+    @apply select-none
