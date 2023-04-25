@@ -1,12 +1,12 @@
 import React, {Fragment, ReactNode} from "react";
-import {Link, type To} from "react-router-dom";
-import sx from "./button.module.css";
+import sx from "./button.module.sass";
+import Link from "next/link";
 
 interface ButtonProps {
-  to?: To;
+  href?: string;
   variant?: "contained" | "outlined";
-  color?: "primary";
-  size?: "medium";
+  color?: "primary" | "dark-500";
+  size?: "medium" | "small";
   leftIcon?: string;
   rightIcon?: string;
   children?: ReactNode;
@@ -15,7 +15,7 @@ interface ButtonProps {
 
 function Button(props: ButtonProps) {
   const {
-    to,
+    href,
     color = "primary",
     variant = "contained",
     leftIcon,
@@ -33,10 +33,10 @@ function Button(props: ButtonProps) {
     </Fragment>
   );
 
-  const classes = `${sx[color]} ${sx[variant]} ${className}`;
+  const classes = `${sx[color]} ${sx[variant]} ${className} ${sx[size]} ${sx.wrapper}`;
 
-  return to ? (
-    <Link className={classes} to={to}>
+  return href ? (
+    <Link className={classes} href={href}>
       {render}
     </Link>
   ) : (
