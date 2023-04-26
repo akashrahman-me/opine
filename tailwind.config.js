@@ -36,6 +36,9 @@ module.exports = {
         poppins: ["'Poppins'", ...fontFamily.sans],
         inter: ["'Inter'", ...fontFamily.sans],
       },
+      boxShadow: {
+        100: `0px 16px 24px 0px #75787E29`,
+      },
     },
     container: {
       center: true,

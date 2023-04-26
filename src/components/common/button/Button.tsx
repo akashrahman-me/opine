@@ -5,7 +5,7 @@ import Link from "next/link";
 interface ButtonProps {
   href?: string;
   variant?: "contained" | "outlined";
-  color?: "primary" | "dark-500";
+  color?: "primary" | "dark-500" | "white";
   size?: "medium" | "small";
   leftIcon?: string;
   rightIcon?: string;
@@ -33,7 +33,7 @@ function Button(props: ButtonProps) {
     </Fragment>
   );
 
-  const classes = `${sx[color]} ${sx[variant]} ${className} ${sx[size]} ${sx.wrapper}`;
+  const classes = `${sx[color]} ${sx[variant]} ${className} ${sx[size]} ${sx.wrapper} btn`;
 
   return href ? (
     <Link className={classes} href={href}>
