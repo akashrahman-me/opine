@@ -13,7 +13,7 @@ html
   @apply scroll-smooth
 
 body
-  @apply p-0 m-0 font-geomanist text-dark-500 text-3xl
+  @apply p-0 m-0 font-geomanist text-dark-500 text-[20px] leading-[140%] md:text-3xl
 
 @layer components
   a
@@ -36,3 +36,27 @@ body
   [role="button"],
   button
     @apply select-none
+
+
+@media screen and (max-width: 768px)
+  .text-6xl
+    @apply text-[64px] leading-[100%]
+  .text-5xl
+    @apply text-[56px] leading-[120%]
+
+  .text-4xl
+    @apply text-[32px] leading-[120%]
+
+  .text-3xl
+    @apply text-[20px] leading-[140%]
+    
+  .text-xl
+    @apply text-[16px] leading-[140%]
+
+@media screen and (max-width: 600px)
+  .text-6xl
+    @apply text-[64px] leading-[100%]
+  .text-5xl
+    @apply text-[40px]
+  .text-4xl
+    @apply text-[28px]

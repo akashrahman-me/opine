@@ -1,34 +1,29 @@
 import Link from "next/link";
-import React from "react";
+import React, {ReactNode} from "react";
+import Hero from "./Hero";
+import TermBlock from "./TermBlock";
 
 function Terms() {
   return (
     <div>
-      <main className="py-20">
-        <div className="container text-center">
-          <h1 className="font-medium text-6xl mb-2">
-            Terms of Service Agreement
-          </h1>
-          <p className="text-dark-200 ">Last Updated on March 27, 2023</p>
-        </div>
-      </main>
-      <section className="mb-40">
+      <Hero />
+      <section className="mb-16 sm:mb-24 lg:mb-40">
         <div className="container">
-          <div className="max-w-[1126px] mx-auto bg-dark-50 p-20 rounded-3xl">
-            <div className="mb-20">
-              <h2 className="text-center text-5xl">Introduction</h2>
+          <div className="max-w-[1126px] mx-auto bg-dark-50 p-4 sm:p-14 md:p-20 rounded-3xl">
+            <div className="mb-6 sm:mb-12 md:mb-20">
+              <h2 className="sm:text-center text-5xl" data-aos="fade-up">
+                Introduction
+              </h2>
             </div>
-            <div className="flex flex-col gap-4 py-6">
-              <h4 className="">Welcome to Opine's Terms of Service!</h4>
+            <TermBlock title="Welcome to Opine's Terms of Service!">
               <p className="text-dark-300 text-xl">
                 The first portion of our Terms of Service is an introduction,
                 which is structured like an FAQ and lays out some high-level
                 concepts before diving into other terms.
               </p>
-            </div>
+            </TermBlock>
             <hr />
-            <div className="flex flex-col gap-4 py-6">
-              <h4 className="">What documents make up the TOS?</h4>
+            <TermBlock title="What documents make up the TOS?">
               <p className="text-dark-300 text-xl">
                 We refer to the Terms of Service as the “TOS”
               </p>
@@ -61,10 +56,9 @@ function Terms() {
                 </Link>
                 , which outlines the terms for vendors in the Opine Marketplace
               </p>
-            </div>
+            </TermBlock>
             <hr />
-            <div className="flex flex-col gap-4 py-6">
-              <h4 className="">Whom does this TOS apply to?</h4>
+            <TermBlock title="Whom does this TOS apply to?">
               <p className="text-dark-300 text-xl">
                 When we refer to “Opine” or we use pronouns like “we”, “us” or
                 “our”, we are referring to Opine, LLC as well as its parents,
@@ -84,10 +78,9 @@ function Terms() {
                 contract, you should ask others in your organization to get
                 clarification about authority.**
               </p>
-            </div>
+            </TermBlock>
             <hr />
-            <div className="flex flex-col gap-4 py-6">
-              <h4 className="">What is the TOS?</h4>
+            <TermBlock title="What is the TOS?">
               <p className="text-dark-300 text-xl">
                 This TOS is a binding contract between you and Opine, and covers
                 all of the offerings, websites, products, services, features,
@@ -104,10 +97,8 @@ function Terms() {
                 other paid services (which we will refer to collectively as the
                 “Services”).
               </p>
-            </div>
-            <hr />
-            <div className="flex flex-col gap-4 py-6">
-              <h4 className="">When does this TOS apply to me?</h4>
+            </TermBlock>
+            <TermBlock title="When does this TOS apply to me?">
               <p className="text-dark-300 text-xl">
                 Now that we have some common language, we want to ensure you
                 understand when and how the TOS applies.
@@ -131,10 +122,9 @@ function Terms() {
                 examples, and this paragraph does not necessarily include all
                 the other ways you can become bound to this TOS.
               </p>
-            </div>
+            </TermBlock>
             <hr />
-            <div className="flex flex-col gap-4 py-6">
-              <h4 className="">What happens with disputes under this TOS?</h4>
+            <TermBlock title="What happens with disputes under this TOS?">
               <p className="text-dark-300 text-xl">
                 One requirement of our TOS is that you must agree to resolve
                 disputes arising under this TOS through binding arbitration
@@ -152,20 +142,19 @@ function Terms() {
                 claims in a conventional trial and will not be able to
                 participate in a court-based class action or similar proceeding.
               </p>
-            </div>
+            </TermBlock>
           </div>
         </div>
       </section>
       <section>
         <div className="container">
-          <div className="max-w-[1126px] mx-auto py-20">
-            <div className="text-center mb-20">
-              <h2 className="font-medium text-6xl">
+          <div className="max-w-[1126px] mx-auto py-10 sm:py-20">
+            <div className="sm:text-center mb-10 sm:mb-20">
+              <h2 data-aos="fade-up" className="font-medium text-6xl">
                 Terms & Conditions of the TOS
               </h2>
             </div>
-            <div className="flex flex-col gap-4 py-6">
-              <h4 className="">1. Eligibility & Registration</h4>
+            <TermBlock title="1. Eligibility & Registration">
               <p className="text-dark-300 text-xl">
                 1.1 Before you use our Websites and Services, you must ensure
                 that such use is in compliance with all laws, rules and
@@ -211,9 +200,8 @@ function Terms() {
                 and/or delete any Accounts or access to the Websites and
                 Services at any time at our sole discretion.
               </p>
-            </div>
-            <div className="flex flex-col gap-4 py-6">
-              <h4 className="">2. Opine's Proprietary Rights</h4>
+            </TermBlock>
+            <TermBlock title="2. Opine's Proprietary Rights">
               <p className="text-dark-300 text-xl">
                 2.1 As between you and Opine, the Websites and Services are
                 owned and/or provided by Opine. The names, logos, trademarks,
@@ -260,7 +248,7 @@ function Terms() {
                 license to access and use the Websites and/or Services as
                 described in and subject to this TOS.
               </p>
-            </div>
+            </TermBlock>
           </div>
         </div>
       </section>

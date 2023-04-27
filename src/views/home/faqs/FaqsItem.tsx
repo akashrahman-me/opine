@@ -13,10 +13,14 @@ function FaqsItem(props: FaqsItemProps) {
   const toggleOpen = () => setOpen((v) => !v);
 
   return (
-    <div className="border-b-[#DEDEDE] last:border-b-0 border-b py-6">
+    <div
+      data-aos="fade-left"
+      data-aos-duration="600"
+      className="border-b-[#DEDEDE] last:border-b-0 border-b py-4 sm:py-6"
+    >
       <div
         role="button"
-        className="flex justify-between gap-3 mb-4"
+        className="flex justify-between gap-3"
         onClick={toggleOpen}
       >
         <p className="">{question}</p>
@@ -27,7 +31,7 @@ function FaqsItem(props: FaqsItemProps) {
         />
       </div>
       <SmoothCollapse expanded={open}>
-        <p className="text-dark-300 text-xl">{answer}</p>
+        <p className="text-dark-300 text-xl mt-3 sm:mt-4">{answer}</p>
       </SmoothCollapse>
     </div>
   );

@@ -40,6 +40,9 @@ module.exports = {
       boxShadow: {
         100: `0px 16px 24px 0px #75787E29`,
       },
+      maxWidth: {
+        contain: "1126px",
+      },
     },
     container: {
       center: true,

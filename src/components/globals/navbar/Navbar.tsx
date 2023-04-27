@@ -4,7 +4,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <nav className="bg-white py-3 sticky top-0 z-[1020]">
+    <nav className="bg-white py-3 sticky top-0 z-[1020] shadow-sm">
       <div className="container flex justify-between gap-10 items-center">
         <div>
           <Link href="/">
