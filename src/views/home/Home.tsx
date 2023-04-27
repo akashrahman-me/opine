@@ -93,20 +93,6 @@ const footerLinks = [
 function Home() {
   return (
     <div>
-      <nav className="bg-white py-3 sticky top-0 z-[1020]">
-        <div className="container flex justify-between gap-10 items-center">
-          <div>
-            <Link href="/">
-              <img height={32} src="/images/Logo Block.svg" alt="" />
-            </Link>
-          </div>
-          <div className="">
-            <Button color="dark-500" size="small" href="/">
-              Sign Up
-            </Button>
-          </div>
-        </div>
-      </nav>
       <main className="mb-20">
         <div className="container pt-24">
           <div className="text-center mb-10">
@@ -250,7 +236,7 @@ function Home() {
           </div>
           <div className="max-w-[1126px] mx-auto grid grid-cols-3 gap-x-10 gap-y-12">
             {[...Array(6)].map((_, index) => (
-              <div>
+              <div key={index}>
                 <div className="mb-4">
                   <img
                     className="rounded-lg"
@@ -279,7 +265,7 @@ function Home() {
             autoplay
           >
             {[...Array(10)].map((_, index) => (
-              <div className="px-4">
+              <div className="px-4" key={index}>
                 <div
                   key={index}
                   className="bg-white py-20 px-[60px] rounded-3xl"
