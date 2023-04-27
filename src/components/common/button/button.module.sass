@@ -2,15 +2,23 @@
 
 .wrapper 
   @apply flex items-center justify-center hover:no-underline
+
   &.contained
     &.dark-500 
       @apply bg-dark-500 text-white
     &.primary
       @apply bg-primary text-dark-500
+    &.white
+      @apply bg-white text-black
+    
   &.outlined
     &.white
       @apply bg-white border border-[#F3F3F3]
+
   &.small
     @apply px-6 py-3 rounded-[10px] text-base
   &.medium
     @apply text-2xl rounded-xl py-4 px-6
+  &.semimedium
+    @apply text-xl leading-7 py-3.5 px-7 font-medium rounded-xl
+  

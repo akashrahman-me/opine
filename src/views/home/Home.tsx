@@ -1,17 +1,99 @@
 import Button from "@/components/common/button/Button";
 import Link from "next/link";
-import React from "react";
+import React, {useState} from "react";
 import ScrollContainer from "react-indiana-drag-scroll";
 import wrapInSpan from "@/utils/wrapInSpan";
 import Slider from "react-slick";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import FaqsItem from "./faqs/FaqsItem";
+
+const faqs = [
+  {
+    question: "Do I still take calls?",
+    answer:
+      "Face to face discussion is invaluable. Where Opine fits in is giving your team fast and efficient communication between calls. This means many meetings can be skipped or reduced - so you can use meeting time to focus on the important stuff.",
+  },
+  {
+    question: "My clients prefer everything in email",
+    answer:
+      "Opine can complement email communication by providing a more visual and interactive way to share feedback.",
+  },
+  {
+    question: "What’s the difference between Opine and Loom?",
+    answer:
+      "Opine focuses on providing instant video feedback, while Loom is more about asynchronous video messaging.",
+  },
+  {
+    question: "Does Opine work for simple projects?",
+    answer:
+      "Absolutely - just drag and drop your file or add your website url, share the link, and you can get instant video feedback.",
+  },
+  {
+    question: "Does Opine work for big projects?",
+    answer:
+      "Yes, Opine can handle large projects and streamline communication between team members.",
+  },
+  {
+    question: "Is it faster to read feedback, or watch a video?",
+    answer:
+      "It depends on personal preferences and the type of feedback. Video can provide more context, while text might be quicker for some users.",
+  },
+  {
+    question: "Can clients and newbies use it?",
+    answer:
+      "Yes, Opine is designed to be user-friendly for both clients and new users.",
+  },
+  {
+    question: "Can I see multiple images together on a canvas?",
+    answer:
+      "Yes, Opine allows you to view multiple images on a single canvas for easy comparison and feedback.",
+  },
+  {
+    question: "Can I edit my work in Opine?",
+    answer:
+      "Opine is primarily for providing feedback, but it may have some basic editing features.",
+  },
+  {
+    question: "Can developers see the CSS specifications in Opine?",
+    answer:
+      "Opine focuses on visual feedback, but developers can use other tools to inspect CSS specifications.",
+  },
+];
+
+const footerLinks = [
+  {
+    id: 1,
+    name: "Contact",
+    url: "/",
+  },
+  {
+    id: 2,
+    name: "Terms",
+    url: "/",
+  },
+  {
+    id: 3,
+    name: "Privacy",
+    url: "/",
+  },
+  {
+    id: 4,
+    name: "Status",
+    url: "/",
+  },
+  {
+    id: 5,
+    name: "Security",
+    url: "/",
+  },
+];
 
 function Home() {
   return (
     <div>
-      <nav className="bg-white py-3 sticky top-0">
+      <nav className="bg-white py-3 sticky top-0 z-[1020]">
         <div className="container flex justify-between gap-10 items-center">
           <div>
             <Link href="/">
@@ -187,42 +269,47 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="py-20 bg-[#FBFBFB]">
-        <div>
+      <section className="py-20 bg-[#FBFBFB]  overflow-hidden mb-20">
+        <div className="w-[150%] -ml-[22%]">
           <Slider
             infinite={true}
             speed={500}
             slidesToShow={3}
             slidesToScroll={1}
-            centerMode={true}
-            centerPadding="0"
+            autoplay
           >
             {[...Array(10)].map((_, index) => (
-              <div
-                key={index}
-                className="bg-white py-20 px-[60px] rounded-3xl outline"
-              >
-                <div>
-                  <p className="text-dark-600 text-xl leading-7">
-                    Et pulvinar eget amet pellentesque justo. Sed sagittis
-                    gravida at eu est nec ullamcorper. Posuere sollicitudin
-                    tellus nulla tortor volutpat. Mauris praesent nam vitae
-                    tincidunt sit donec blandit tellus. Mauris scelerisque
-                    pulvinar neque elit imperdiet nec.
-                  </p>
-                  <div className="flex gap-3 items-center">
-                    <div>
-                      <img
-                        className="w-[60px] aspect-square object-cover rounded-full"
-                        src="/images/Avatar.png"
-                        alt=""
-                      />
-                    </div>
-                    <div className="flex flex-col gap-1">
-                      <strong className="font-normal text-2xl text-dark-600 block">
-                        Kate Adams
-                      </strong>
-                      <span className="text-dark-400 text-lg">Freelancer</span>
+              <div className="px-4">
+                <div
+                  key={index}
+                  className="bg-white py-20 px-[60px] rounded-3xl"
+                >
+                  <div>
+                    <p className="text-dark-600 text-xl leading-7 mb-12 text-center">
+                      Et pulvinar eget amet pellentesque justo. Sed sagittis
+                      gravida at eu est nec ullamcorper. Posuere sollicitudin
+                      tellus nulla tortor volutpat. Mauris praesent nam vitae
+                      tincidunt sit donec blandit tellus. Mauris scelerisque
+                      pulvinar neque elit imperdiet nec.
+                    </p>
+                    <div className="flex justify-center">
+                      <div className="flex gap-3 items-center">
+                        <div>
+                          <img
+                            className="w-[60px] aspect-square object-cover rounded-full"
+                            src="/images/Avatar.png"
+                            alt=""
+                          />
+                        </div>
+                        <div className="flex flex-col gap-1">
+                          <strong className="font-normal text-2xl text-dark-600 block">
+                            Kate Adams
+                          </strong>
+                          <span className="text-dark-400 text-lg">
+                            Freelancer
+                          </span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -231,6 +318,61 @@ function Home() {
           </Slider>
         </div>
       </section>
+      <section className="py-20 bg-white mb-20">
+        <div className="container">
+          <div className="max-w-[1125px] bg-[#FBFBFB] rounded-3xl mx-auto p-20">
+            <h2 className="text-5xl text-dark-800 block mb-20 text-center">
+              People often ask...
+            </h2>
+            <div>
+              {faqs.map(({question, answer}, index) => (
+                <FaqsItem answer={answer} question={question} key={index} />
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer className="bg-[#1A1919] text-white">
+        <div className="py-20">
+          <div className="max-w-[1126px] mx-auto text-center bg-dark-500 p-20 rounded-3xl">
+            <h2 className="text-4xl mb-20 blockt">
+              Great feedback creates great work.
+            </h2>
+            <div className="flex justify-center gap-6">
+              <Button
+                href="/"
+                className="min-w-[192px]"
+                size="semimedium"
+                color="white"
+              >
+                Sign Up
+              </Button>
+              <Button href="/" className="min-w-[192px]" size="semimedium">
+                View the demo
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="max-w-[1126px] mx-auto py-10 grid grid-cols-2">
+          <div>
+            <p className="">Opine - creative feedback re-invented.</p>
+          </div>
+          <div className="flex justify-end text-right">
+            <div>
+              <div className="flex items-center gap-10 flex-wrap mb-10">
+                {footerLinks.map(({id, name, url}) => (
+                  <Link key={id} href={url} className="text-dark-200 text-xl">
+                    {name}
+                  </Link>
+                ))}
+              </div>
+              <p className="text-dark-200 text-[10px] leading-[18px]">
+                &copy; {new Date().getFullYear()} All Rights Reserved by Opine
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }

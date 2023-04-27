@@ -6,7 +6,7 @@ interface ButtonProps {
   href?: string;
   variant?: "contained" | "outlined";
   color?: "primary" | "dark-500" | "white";
-  size?: "medium" | "small";
+  size?: "semimedium" | "medium" | "small";
   leftIcon?: string;
   rightIcon?: string;
   children?: ReactNode;
