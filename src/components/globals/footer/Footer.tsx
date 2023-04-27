@@ -1,34 +1,7 @@
 import Button from "@/components/common/button/Button";
 import Link from "next/link";
 import React from "react";
-
-const footerLinks = [
-  {
-    id: 1,
-    name: "Contact",
-    url: "/",
-  },
-  {
-    id: 2,
-    name: "Terms",
-    url: "/",
-  },
-  {
-    id: 3,
-    name: "Privacy",
-    url: "/",
-  },
-  {
-    id: 4,
-    name: "Status",
-    url: "/",
-  },
-  {
-    id: 5,
-    name: "Security",
-    url: "/",
-  },
-];
+import footerLinks from "./footerLinks.json";
 
 function Footer() {
   return (
