@@ -17,9 +17,15 @@ function TimeSaver() {
             Work smarter and make time for more creative work
           </p>
         </div>
-        <div className="max-w-contain mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12">
+        {/*grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 */}
+        <div className="max-w-contain mx-auto gap-x-10 gap-y-12 next-level-grid">
           {savers.map(({description, id, title, thumb}) => (
-            <div key={id} data-aos="fade-up" data-aos-duration="600">
+            <div
+              className="next-level-grid-item"
+              key={id}
+              data-aos="fade-up"
+              data-aos-duration="600"
+            >
               <div className="mb-4">
                 <img className="rounded-lg w-full" src={thumb} alt="" />
               </div>

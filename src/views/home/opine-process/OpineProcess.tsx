@@ -4,7 +4,7 @@ import processes from "./processes.json";
 
 function OpineProcess() {
   return (
-    <section className="mb-8 sm:mb-16 md:mb-28 lg:mb-40">
+    <section className="mb-8 sm:mb-16 md:mb-28 lg:mb-40 overflow-hidden">
       <div className="container">
         <div className="text-center sm:mb-0 mb-4">
           <h2 className="text-5xl mb-2" data-aos="fade-up">

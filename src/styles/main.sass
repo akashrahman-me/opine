@@ -37,6 +37,18 @@ body
   button
     @apply select-none
 
+  .next-level-grid
+    @apply flex flex-wrap
+
+  .next-level-grid-item:nth-child(1),
+  .next-level-grid-item:nth-child(2),
+  .next-level-grid-item:nth-child(3)
+    @apply flex-[1_0_calc(100%)] sm:flex-[1_0_calc(50%-40px)] lg:flex-[1_0_calc(33.3333%-40px)]
+
+  .next-level-grid-item:nth-child(n+4)
+    @apply flex-[1_0_calc(100%)] sm:flex-[1_0_calc(50%-40px)] lg:flex-[1_0_calc(25%-40px)]
+  
+
 
 @media screen and (max-width: 768px)
   .text-6xl

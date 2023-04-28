@@ -55,7 +55,7 @@ const faqs = [
 
 function Faqs() {
   return (
-    <section className="py-0 md:py-20 bg-white mb-20">
+    <section className="py-0 md:py-20 bg-white mb-20 overflow-hidden">
       <div className="container">
         <div className="max-w-contain bg-[#FBFBFB] rounded-3xl mx-auto sm:p-12 md:p-20">
           <h2

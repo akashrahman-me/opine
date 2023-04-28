@@ -2,6 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import testimonial from "./Testimonial.json";
 
 function Testimonial() {
   return (
@@ -23,35 +24,28 @@ function Testimonial() {
             },
           ]}
         >
-          {[...Array(10)].map((_, index) => (
-            <div className="px-4" key={index}>
-              <div
-                key={index}
-                className="bg-white py-10 md:py-20 px-10 md:px-[60px] rounded-3xl"
-              >
+          {testimonial.map(({id, review, user}) => (
+            <div className="px-4" key={id}>
+              <div className="bg-white py-10 md:py-20 px-10 md:px-[60px] rounded-3xl">
                 <div>
                   <p className="text-dark-600 text-xl leading-7 mb-12 text-center">
-                    Et pulvinar eget amet pellentesque justo. Sed sagittis
-                    gravida at eu est nec ullamcorper. Posuere sollicitudin
-                    tellus nulla tortor volutpat. Mauris praesent nam vitae
-                    tincidunt sit donec blandit tellus. Mauris scelerisque
-                    pulvinar neque elit imperdiet nec.
+                    {review}
                   </p>
                   <div className="flex justify-center">
                     <div className="flex gap-3 items-center">
                       <div>
                         <img
                           className="w-[60px] aspect-square object-cover rounded-full"
-                          src="/images/Avatar.png"
+                          src={user.avatar}
                           alt=""
                         />
                       </div>
                       <div className="flex flex-col gap-1">
                         <strong className="font-normal text-2xl text-dark-600 block">
-                          Kate Adams
+                          {user.name}
                         </strong>
                         <span className="text-dark-400 text-lg">
-                          Freelancer
+                          {user.title}
                         </span>
                       </div>
                     </div>
