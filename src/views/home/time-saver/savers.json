@@ -3,42 +3,42 @@
     "id": 1,
     "title": "Video intros",
     "description": "Shorten or replace meetings with async video presentations",
-    "thumb": "/images/Frame 1779.svg"
+    "thumb": "/images/Chat item (1).svg"
   },
   {
     "id": 2,
     "title": "Figma plugin",
     "description": "Instantly sync 100+ frame figma files in one click",
-    "thumb": "/images/Frame 1778.svg"
+    "thumb": "/images/Group 4.svg"
   },
   {
     "id": 3,
     "title": "The feed",
     "description": "Skip status meetings; get a birds-eye view with the real-time feed",
-    "thumb": "/images/Frame 1778 (1).svg"
+    "thumb": "/images/Notifications __ Filled view.svg"
   },
   {
     "id": 4,
     "title": "Weekly email",
     "description": "Automatic summary emails for stakeholders",
-    "thumb": "/images/Frame 1779 (1).svg"
+    "thumb": "/images/Frame 1891.svg"
   },
   {
     "id": 5,
     "title": "Feedback reminders",
     "description": "Schedule reminder emails to nudge slow clients",
-    "thumb": "/images/Frame 1778 (2).svg"
+    "thumb": "/images/Group 3 (1).svg"
   },
   {
     "id": 6,
     "title": "Sharable feedback",
     "description": "Instead of explaining what happened in a meeting, share a link",
-    "thumb": "/images/Frame 1778 (3).svg"
+    "thumb": "/images/Group 5.svg"
   },
   {
     "id": 7,
     "title": "Sharable feedback",
     "description": "Instead of explaining what happened in a meeting, share a link",
-    "thumb": "/images/Frame 1778 (3).svg"
+    "thumb": "/images/Group 3 (1).svg"
   }
 ]

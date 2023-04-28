@@ -5,7 +5,6 @@
 @import "tailwindcss/components"
 @import "tailwindcss/utilities"
 
-
 *
   @apply box-border
 
@@ -40,14 +39,15 @@ body
   .next-level-grid
     @apply flex flex-wrap
 
-  .next-level-grid-item:nth-child(1),
-  .next-level-grid-item:nth-child(2),
-  .next-level-grid-item:nth-child(3)
-    @apply flex-[1_0_calc(100%)] sm:flex-[1_0_calc(50%-40px)] lg:flex-[1_0_calc(33.3333%-40px)]
+    & .next-level-grid-item:nth-child(-n+3)
+      @apply flex-[1_0_calc(100%)] sm:flex-[1_0_calc(50%-40px)] lg:flex-[1_0_calc(33.3333%-40px)]
 
-  .next-level-grid-item:nth-child(n+4)
-    @apply flex-[1_0_calc(100%)] sm:flex-[1_0_calc(50%-40px)] lg:flex-[1_0_calc(25%-40px)]
-  
+    & .next-level-grid-item:nth-child(n+4)
+      @apply flex-[1_0_calc(100%)] sm:flex-[1_0_calc(50%-40px)] lg:flex-[1_0_calc(25%-40px)]
+    
+    & .next-level-grid-item
+      & .next-level-grid-image
+        @apply p-6 pb-0 lg:p-8 lg:pb-0 flex items-end bg-primary/70 rounded-lg aspect-[349/200]
 
 
 @media screen and (max-width: 768px)
